@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "posecue"
+version = "0.1.0"
+description = "Film a dancer, get LED cues: turns a dance video into a LumaCue light-show file."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["computer-vision", "pose-estimation", "mediapipe", "led", "dance", "lighting", "lumacue"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "opencv-python>=4.8",
+    "mediapipe>=0.10.14",
+    "imageio-ffmpeg>=0.4.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+posecue = "posecue.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["posecue*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-p no:cacheprovider"

@@ -1,0 +1,39 @@
+# Models (downloaded by scripts/download_models.py, Apache 2.0, not ours to redistribute here)
+models/*
+!models/README.md
+
+# Outputs
+out/
+*.lumacue.json
+*.moves.json
+*.npz
+preview*.mp4
+*.part
+
+# Your own dance videos and songs (keep them out of a public repo)
+videos/
+media/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.mp3
+*.wav
+*.m4a
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

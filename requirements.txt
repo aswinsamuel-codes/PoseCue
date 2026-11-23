@@ -1,0 +1,9 @@
+# Runtime
+numpy>=1.24
+scipy>=1.10
+opencv-python>=4.8
+mediapipe>=0.10.14      # Tasks API (PoseLandmarker); PoseCue doesn't use the old mp.solutions
+imageio-ffmpeg>=0.4.9   # bundled ffmpeg for decoding audio and encoding the preview
+
+# Tests
+pytest>=7
